@@ -7,7 +7,7 @@ var bing = require('node-bing-api')({ accKey: "YHaVJMOWoCR8ZnA6KiVSDYMETlc0NZh47
 var app = express();
 
 var port = process.env.PORT || 3000;
-var db_location = 'mongodb://localhost:27017/image_search_db';
+var db_location = process.env.MONGODB_URI || 'mongodb://localhost:27017/image_search_db';
 
 /* routing */
 app.get('/', function(req, res) {
